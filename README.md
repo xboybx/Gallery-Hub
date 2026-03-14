@@ -88,5 +88,4 @@ The app will be available at `http://localhost:5173`.
 
 ---
 
-## 🎥 Presentation Guide
-For a detailed walkthrough of the application's features and technical implementation, refer to the [Presentation Answers](presentation_answers.md).
+
