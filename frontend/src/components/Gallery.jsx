@@ -16,7 +16,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchFavourites = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/favourites');
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/favourites`);
         if (response.ok) {
           const data = await response.json();
           dispatch({ type: 'SET_FAVOURITES', payload: data });
@@ -55,7 +55,7 @@ const Gallery = () => {
           method: 'DELETE',
         });
       } else {
-        await fetch('http://localhost:5000/api/favourites', {
+        await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/favourites`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
